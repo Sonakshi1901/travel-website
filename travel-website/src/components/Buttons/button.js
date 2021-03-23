@@ -11,12 +11,12 @@ const Button = ({
   onClick,
   buttonStyle,
   buttonSize}) => {
-    const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
+    const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[1];
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
     return(
       <Link to='/sign-up' className='btn-mobile'>
-        <button className={'btn ${checkButtonStyle} ${checkButtonSize}'} onClick={onClick} type={type}>
+        <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick}>
            {children}
         </button>
       </Link>
