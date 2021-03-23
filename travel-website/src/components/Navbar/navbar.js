@@ -27,7 +27,7 @@ function Navbar() {
   return(
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           EXPLORIA <i class="fas fa-suitcase"></i>
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -55,7 +55,7 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+        {button && <Button buttonStyle="btn--outline" buttonSize="btn--medium">SIGN UP</Button>}
       </div>
     </nav>
   );
